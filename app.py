@@ -1,7 +1,7 @@
 import gradio as gr
-from model import get_prediction
+from model import prediction
 
 def predict(text):
-    return get_prediction(text)
+    return prediction(text)
 
 gr.Interface(fn=predict, inputs="text", outputs="text").launch()
